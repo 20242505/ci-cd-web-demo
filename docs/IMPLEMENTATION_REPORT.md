@@ -7,8 +7,8 @@
 | Proyecto | Enfoque: aplicación web y pipeline CI/CD |
 | Fecha de preparación | 8 de noviembre de 2026 |
 | Modalidad | Práctico individual o en parejas |
-| Autor o integrantes | Completar antes de entregar |
-| Matrícula y sección | Completar antes de entregar |
+| Autor | Pedro Eusebio |
+| Matrícula y sección | No proporcionadas; añadirlas antes de la entrega académica. |
 | Repositorio público | [20242505/ci-cd-web-demo](https://github.com/20242505/ci-cd-web-demo) |
 
 ## Objetivo y alcance
@@ -55,21 +55,40 @@ Registrar únicamente resultados observados. Los estados pendientes no equivalen
 | Build de producción | `npm run check` completado: pruebas y build de Vite correctos. |
 | Auditoría de dependencias | `npm audit`: 0 vulnerabilidades detectadas al comprobar esta versión. |
 | Repositorio remoto | Creado y público: [20242505/ci-cd-web-demo](https://github.com/20242505/ci-cd-web-demo). |
-| Ejecución en GitHub Actions | Pendiente de añadir URL, commit y conclusión. |
-| Sitio en GitHub Pages | Pendiente de confirmar URL y funcionamiento. |
-| Fallo y recuperación del pipeline | Pendiente de demostrar en una rama o pull request. |
-| Vídeo de presentación | Pendiente de grabar y añadir el enlace de YouTube. |
+| Ejecución en GitHub Actions | [Ejecución 42506979620](https://github.com/20242505/ci-cd-web-demo/actions/runs/42506979620) correcta: `test`, `build` y `deploy` aprobados para el commit `f448f6e35d2cc7058441ef1d633fd224fcaedb1b` de `main`. |
+| Sitio en GitHub Pages | Publicado mediante workflow en [Enfoque](https://20242505.github.io/ci-cd-web-demo/). Verificado en Chrome: añadir dos tareas, completar una y recargar conservó las tareas y su estado. |
+| Detección de fallo del pipeline | [Ejecución 42507060493](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507060493) fallida en el [pull request #2](https://github.com/20242505/ci-cd-web-demo/pull/2), rama `codex/demo-quality-gate`, commit `89c7d78c77c9ceed27cf52356d3d1c63de80e1d6`: 30 pruebas correctas y una aserción intencionalmente incorrecta. `build` y `deploy` omitidos. |
+| Recuperación del pipeline | [Ejecución 42507202230](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507202230) correcta para el commit `e6dc595e397d2e9807f8eea94b3756a268a86dd7`: 31 pruebas aprobadas, build correcto y deploy omitido, como corresponde a un pull request. |
+| Presentación | [Presentación PowerPoint paso a paso](Presentacion-CI-CD-Enfoque.pptx), alternativa permitida por la consigna. El vídeo de YouTube es opcional si se entrega la PPTX. |
 
-Para conservar evidencia, añade enlaces a ejecuciones y capturas con fecha, sin publicar credenciales. El guion de [DEMO.md](DEMO.md) permite mostrar tanto una ejecución correcta como la detección de un fallo.
+Para conservar evidencia, añade enlaces a ejecuciones y capturas con fecha, sin publicar credenciales. El guion de [DEMO.md](DEMO.md) permite mostrar tanto una ejecución correcta como la detección de un fallo, en vídeo o acompañando una presentación.
+
+### Capturas de evidencia
+
+Los estados y commits consultados mediante la API de GitHub se conservan en [verification-results.json](evidence/verification-results.json). El desglose local de cobertura se conserva en [coverage-summary.json](evidence/coverage-summary.json). Las capturas siguientes corresponden a la ejecución y al sitio comprobados el 8 de noviembre de 2026.
+
+Sitio publicado en GitHub Pages:
+
+![Aplicación Enfoque publicada](evidence/app-live.png)
+
+Ejecución de `main` con las tres etapas aprobadas:
+
+![Pipeline con pruebas, build y despliegue correctos](evidence/pipeline-success.png)
+
+### Demostración del control de calidad
+
+La rama de demostración añade una prueba extra que comprueba las estadísticas de una lista vacía. La primera versión esperaba incorrectamente `pending = 1`, cuando el resultado correcto era `0`. El registro de Actions mostró `expected +0 to be 1`, falló `test` y omitió sus etapas dependientes. La aserción se corrigió para esperar `0` sin cambiar la implementación ni reducir la cobertura.
+
+La suite de `main` contiene 30 pruebas. La rama de demostración contiene 31 por esa prueba adicional; no debe confundirse su cantidad con el resultado de `main`. La ejecución corregida aprobó las 31 pruebas y el build, mientras que el deploy quedó omitido por ser un pull request. El pull request conserva la evidencia del fallo y la corrección y se cierra sin integración para mantener `main` con sus 30 pruebas.
 
 ## Relación con la rúbrica
 
 | Criterio | Peso | Elementos entregados y comprobaciones |
 | --- | --- | --- |
-| Funcionalidad del pipeline | 40 % | Workflow, dependencias entre jobs, condiciones y ejecución remota por acreditar. |
+| Funcionalidad del pipeline | 40 % | Workflow, dependencias entre jobs, publicación real y bloqueo/recuperación comprobados con las ejecuciones enlazadas. |
 | Calidad del código y pruebas | 30 % | Separación de lógica, pruebas unitarias/integración y umbral de cobertura. |
 | Documentación | 20 % | README, pipeline, contribución, despliegue e informe. |
-| Presentación y demo | 10 % | Guion paso a paso; grabación y enlace final pendientes. |
+| Presentación y demo | 10 % | Guion paso a paso, presentación PowerPoint y enlaces a ejecuciones correctas, fallida y corregida. |
 
 ## Limitaciones y riesgos
 
@@ -78,7 +97,7 @@ Para conservar evidencia, añade enlaces a ejecuciones y capturas con fecha, sin
 - jsdom comprueba interacciones, pero no acredita el diseño ni la compatibilidad de todos los navegadores.
 - El workflow impide desplegar una ejecución fallida. Para impedir también su integración debe configurarse protección de rama con comprobaciones obligatorias.
 - El despliegue depende de que Pages esté habilitado y de los permisos y reglas del repositorio.
-- El vídeo final requiere grabar la demostración y publicarlo según las instrucciones de la asignatura.
+- La presentación puede entregarse en PowerPoint, como permite la consigna. Si se elige la opción de vídeo, todavía hay que grabarlo y publicar su enlace.
 
 ## Conclusión técnica
 

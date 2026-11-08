@@ -5,6 +5,10 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 3
+    # jsdom 30+ requiere Node 22.22.2; el proyecto admite desde 22.19.
+    ignore:
+      - dependency-name: jsdom
+        update-types: [version-update:semver-major]
   - package-ecosystem: github-actions
     directory: /
     schedule:

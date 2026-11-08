@@ -1,5 +1,7 @@
 # Enfoque · CI/CD con GitHub Actions
 
+[![CI/CD - Enfoque](https://github.com/20242505/ci-cd-web-demo/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/20242505/ci-cd-web-demo/actions/workflows/ci-cd.yml)
+
 Aplicación web de tareas que demuestra un flujo completo de integración y despliegue continuos: probar el código, comprobar su cobertura, construir el sitio y publicarlo en GitHub Pages.
 
 **Proyecto académico:** aplicación web simple con pipeline CI/CD. Implementación original; la plantilla de la clase no se adjuntó y el diagrama del aula virtual no estuvo accesible. El diagrama de este repositorio representa la solución implementada.
@@ -88,7 +90,11 @@ La cobertura incluye los módulos JavaScript de `src/`, salvo `src/main.js`, que
 
 ## Publicación y evidencias
 
-Repositorio público: [20242505/ci-cd-web-demo](https://github.com/20242505/ci-cd-web-demo). El sitio previsto es `https://20242505.github.io/ci-cd-web-demo/`; aún debe verificarse el primer despliegue.
+Repositorio público: [20242505/ci-cd-web-demo](https://github.com/20242505/ci-cd-web-demo). Aplicación publicada: [Enfoque en GitHub Pages](https://20242505.github.io/ci-cd-web-demo/).
+
+La [ejecución correcta de `main`](https://github.com/20242505/ci-cd-web-demo/actions/runs/42506979620) completó pruebas, build y despliegue para el commit `f448f6e35d2cc7058441ef1d633fd224fcaedb1b`. En Chrome se comprobó añadir dos tareas, completar una y recargar: los datos persistieron correctamente.
+
+También se demostró el control de calidad en el [pull request #2](https://github.com/20242505/ci-cd-web-demo/pull/2): una [prueba intencionalmente fallida](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507060493) impidió continuar y la [corrección posterior](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507202230) aprobó las 31 pruebas de esa rama y el build, sin desplegar desde el pull request.
 
 Validación local realizada el 8 de noviembre de 2026: 30 pruebas aprobadas (22 unitarias y 8 de integración), build de producción correcto y 0 vulnerabilidades detectadas por `npm audit`. Cobertura: 98.24 % de instrucciones, 94.73 % de ramas, 95.83 % de funciones y 99.02 % de líneas.
 
@@ -100,7 +106,8 @@ Consulta el [registro de evidencias](docs/IMPLEMENTATION_REPORT.md#evidencias) p
 - [Publicación y recuperación de despliegues](docs/DEPLOYMENT.md)
 - [Guía de contribución](CONTRIBUTING.md)
 - [Informe de implementación y evidencias](docs/IMPLEMENTATION_REPORT.md)
-- [Guion de vídeo y lista de entrega](docs/DEMO.md)
+- [Guion de presentación y lista de entrega](docs/DEMO.md)
+- [Presentación PowerPoint paso a paso](docs/Presentacion-CI-CD-Enfoque.pptx)
 
 ## Referencias
 

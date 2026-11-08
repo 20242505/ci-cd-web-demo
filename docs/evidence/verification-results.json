@@ -1,0 +1,89 @@
+{
+  "recorded_at_utc": "2026-11-08T17:55:21.9439363Z",
+  "repository": "https://github.com/20242505/ci-cd-web-demo",
+  "site": {
+    "url": "https://20242505.github.io/ci-cd-web-demo/",
+    "http_status": 200,
+    "browser_check": "Chrome: añadir dos tareas, completar una y recargar conserva los datos."
+  },
+  "workflow_runs": [
+    {
+      "id": 42506979620,
+      "url": "https://github.com/20242505/ci-cd-web-demo/actions/runs/42506979620",
+      "event": "push",
+      "commit": "f448f6e35d2cc7058441ef1d633fd224fcaedb1b",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T17:51:29Z",
+      "jobs": [
+        {
+          "name": "Pruebas y cobertura",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build de producción",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Desplegar en GitHub Pages",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 42507060493,
+      "url": "https://github.com/20242505/ci-cd-web-demo/actions/runs/42507060493",
+      "event": "pull_request",
+      "commit": "89c7d78c77c9ceed27cf52356d3d1c63de80e1d6",
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-08T17:51:58Z",
+      "jobs": [
+        {
+          "name": "Pruebas y cobertura",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Build de producción",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Desplegar en GitHub Pages",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "id": 42507202230,
+      "url": "https://github.com/20242505/ci-cd-web-demo/actions/runs/42507202230",
+      "event": "pull_request",
+      "commit": "e6dc595e397d2e9807f8eea94b3756a268a86dd7",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T17:53:56Z",
+      "jobs": [
+        {
+          "name": "Pruebas y cobertura",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build de producción",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Desplegar en GitHub Pages",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ]
+}

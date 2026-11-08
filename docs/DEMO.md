@@ -1,4 +1,6 @@
-# Guion de demostración y entrega
+# Guion de presentación, demostración y entrega
+
+La consigna permite presentar un vídeo de YouTube **o** una presentación PowerPoint que explique el proceso paso a paso. Se entrega la [presentación PowerPoint](Presentacion-CI-CD-Enfoque.pptx); el guion siguiente también permite grabar un vídeo si se prefiere esa opción.
 
 ## Preparación
 
@@ -60,24 +62,25 @@ No desactives pruebas ni reduzcas los umbrales para lograr una ejecución correc
 ## Lista de entrega
 
 - [ ] Añadir autor o integrantes, matrícula y sección al informe.
-- [ ] Confirmar que el repositorio es accesible para el docente.
-- [ ] Confirmar que README y guías reflejan los comandos reales.
-- [ ] Adjuntar la URL del repositorio de GitHub.
-- [ ] Adjuntar una ejecución correcta de `main`, con pruebas, build y deploy.
-- [ ] Adjuntar la URL de GitHub Pages y comprobarla en un navegador.
-- [ ] Registrar resultados y porcentajes reales en el informe.
-- [ ] Conservar evidencia del fallo y recuperación del pipeline.
-- [ ] Grabar el vídeo paso a paso siguiendo el guion.
-- [ ] Subirlo a YouTube con visibilidad que permita al docente verlo y comprobar el enlace desde otra sesión.
-- [ ] Entregar el enlace del vídeo o la presentación permitida por el docente, junto con la documentación Markdown.
+- [x] Confirmar que el repositorio es público.
+- [x] Confirmar que README y guías reflejan los comandos reales.
+- [x] Adjuntar la URL del repositorio de GitHub.
+- [x] Adjuntar una ejecución correcta de `main`, con pruebas, build y deploy.
+- [x] Adjuntar la URL de GitHub Pages y comprobarla en un navegador.
+- [x] Registrar resultados y porcentajes reales en el informe.
+- [x] Conservar evidencia del fallo y recuperación del pipeline.
+- [x] Preparar y revisar la presentación PowerPoint paso a paso, con capturas reales y notas de exposición.
+- [ ] Solo si se elige vídeo: subirlo a YouTube con visibilidad que permita al docente verlo y comprobar el enlace desde otra sesión.
+- [ ] Entregar la presentación o el enlace del vídeo, junto con la documentación Markdown.
 
 ## Enlaces para completar antes de entregar
 
 | Entregable | Enlace comprobado |
 | --- | --- |
 | Repositorio GitHub | [20242505/ci-cd-web-demo](https://github.com/20242505/ci-cd-web-demo) |
-| Aplicación publicada | Pendiente de confirmar. |
-| Ejecución correcta | Pendiente de registrar. |
-| Ejecución fallida controlada | Pendiente de registrar. |
-| Ejecución corregida | Pendiente de registrar. |
-| Vídeo de YouTube | Pendiente de grabar y publicar. |
+| Aplicación publicada | [Enfoque en GitHub Pages](https://20242505.github.io/ci-cd-web-demo/) |
+| Ejecución correcta | [Main: pruebas, build y deploy aprobados](https://github.com/20242505/ci-cd-web-demo/actions/runs/42506979620) |
+| Ejecución fallida controlada | [PR #2: prueba fallida; build y deploy omitidos](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507060493) |
+| Ejecución corregida | [PR #2: 31 pruebas y build correctos; deploy omitido](https://github.com/20242505/ci-cd-web-demo/actions/runs/42507202230) |
+| Presentación PowerPoint | [Presentación CI/CD Enfoque](Presentacion-CI-CD-Enfoque.pptx) |
+| Vídeo de YouTube, opcional | Pendiente solo si se elige esta alternativa. |
