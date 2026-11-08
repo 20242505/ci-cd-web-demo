@@ -1,0 +1,27 @@
+{
+  "name": "ci-cd-web-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enfoque: aplicación de tareas con pruebas y despliegue continuo a GitHub Pages",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:coverage": "vitest run --coverage",
+    "check": "npm run test:coverage && npm run build"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "5.1.0",
+    "jsdom": "29.1.1",
+    "vite": "8.3.6",
+    "vitest": "5.1.0"
+  }
+}
